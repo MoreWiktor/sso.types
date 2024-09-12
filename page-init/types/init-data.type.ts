@@ -1,5 +1,4 @@
-import { PagesEnum } from "../enums";
-import { InputType } from "./input.type";
+import { PagesEnum, InputTypeEnum, ButtonTypeEnum } from '../enums';
 
 export type FieldStyleType = {
   container?: string;
@@ -9,36 +8,24 @@ export type FieldStyleType = {
 
 export type FieldType = {
   title: string;
-  type: InputType;
+  type: InputTypeEnum;
   style?: FieldStyleType;
   required?: boolean;
 };
 
-export type ButtonStyleType = { 
-  button: {
-      base: string;
-      primary?: string;
-      done?: string;
-      error?: string;
-      loading?: string;
-  };
+export type ButtonStyleType = {
+  base: string;
+  primary?: string;
+  done?: string;
+  error?: string;
+  loading?: string;
 };
-
-export enum ButtonTypeEnum {
-  SUBMIT = "submit",
-  REDIRECT = "redirect",
-}
 
 export type ButtonType = {
   title: string;
   style?: ButtonStyleType;
   type: ButtonTypeEnum;
-} & ({
-  type: ButtonTypeEnum.SUBMIT;
-} | {
-  type: ButtonTypeEnum.REDIRECT;
-  link: string;
-});
+};
 
 export type FormStyleType = {
   title?: string;
@@ -47,21 +34,21 @@ export type FormStyleType = {
 
 export type FormType = {
   title: string;
-  style?: FormStyleType
-}
+  style?: FormStyleType;
+};
 
 export type BackgroundStyleType = {
   container?: string;
-}
+};
 
 export type BackgroundType = {
   style?: BackgroundStyleType;
-}
+};
 
 export type InitDataType = {
   page: PagesEnum.SIGNUP;
-  fields: FieldType[];
-  buttons: ButtonType[];
   form: FormType;
   background: BackgroundType;
+  fields: FieldType[];
+  buttons: ButtonType[];
 };
