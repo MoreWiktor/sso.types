@@ -9,8 +9,8 @@ export type FieldStyleType = {
 export type FieldType = {
   title: string;
   type: InputTypeEnum;
-  style?: FieldStyleType;
-  required?: boolean;
+  style: FieldStyleType;
+  required: boolean;
 };
 
 export type ButtonStyleType = {
@@ -23,7 +23,7 @@ export type ButtonStyleType = {
 
 export type ButtonType = {
   title: string;
-  style?: ButtonStyleType;
+  style: ButtonStyleType;
   type: ButtonTypeEnum;
 };
 
@@ -34,7 +34,7 @@ export type FormStyleType = {
 
 export type FormType = {
   title: string;
-  style?: FormStyleType;
+  style: FormStyleType;
 };
 
 export type BackgroundStyleType = {
@@ -42,7 +42,7 @@ export type BackgroundStyleType = {
 };
 
 export type BackgroundType = {
-  style?: BackgroundStyleType;
+  style: BackgroundStyleType;
 };
 
 export type PageInitDataType = {
