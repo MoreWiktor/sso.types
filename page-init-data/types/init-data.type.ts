@@ -14,7 +14,7 @@ export type FieldType = {
 };
 
 export type ButtonStyleType = {
-  base: string;
+  base?: string;
   primary?: string;
   done?: string;
   error?: string;
@@ -45,7 +45,7 @@ export type BackgroundType = {
   style?: BackgroundStyleType;
 };
 
-export type InitDataType = {
+export type PageInitDataType = {
   page: PagesEnum.SIGNUP;
   form: FormType;
   background: BackgroundType;
